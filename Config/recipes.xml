@@ -1,15 +1,29 @@
 <configs>
     <append xpath="/recipes">
-        <recipe name="resourceSpring" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
-            <ingredient name="unit_iron" count="1"/>
-            <ingredient name="unit_clay" count="1"/>
+
+    <!--   -->
+        <recipe name="resourceSpring" count="1" craft_time="12" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="resourceForgedIron" count="1"/>
         </recipe>
+
+    <!--   -->
         <recipe name="barbedWireSheet" count="1" craft_time="4">
             <ingredient name="resourceScrapIron" count="10"/>
         </recipe>
+
+    <!--   -->
         <recipe name="decoCowSkull" count="1" craft_time="5" craft_area="workbench" tags="workbenchCrafting">
             <ingredient name="resourceBone" count="40"/>
         </recipe>
+
+        <recipe name="industrialLight01_player" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+            <ingredient name="resourceForgedIron" count="4"/>
+            <ingredient name="resourceElectricParts" count="4"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".5,.5,.5,.3,.15" tags="resourceForgedIron,resourceElectricParts"/>
+            </effect_group>
+        </recipe>
+    <!--   -->
         <recipe name="signRoadStop" count="1" craft_time="20" craft_area="workbench" tags="workbenchCrafting">
             <ingredient name="resourceForgedIron" count="5"/>
             <ingredient name="resourcePaint" count="5"/>
@@ -18,8 +32,46 @@
             <ingredient name="resourceForgedIron" count="5"/>
             <ingredient name="resourcePaint" count="5"/>
         </recipe>
-        <recipe name="cntBarrelGasSingle00" craft_time="20" count="1" craft_area="workbench" tags="workbenchCrafting">
+        <recipe name="signRoadSlow" count="1" craft_time="20" craft_area="workbench" tags="workbenchCrafting">
             <ingredient name="resourceForgedIron" count="5"/>
+            <ingredient name="resourcePaint" count="5"/>
+        </recipe>
+
+    <!--   -->
+        <recipe name="cntBarrelGasSingle00" craft_time="25" count="1" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="resourceForgedIron" count="5"/>
+        </recipe>
+
+    <!--   -->
+        <recipe name="modDyeRed" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+            <ingredient name="resourcePaint" count="25"/>
+        </recipe>
+        <recipe name="modDyeGreen" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+            <ingredient name="resourcePaint" count="25"/>
+        </recipe>
+        <recipe name="modDyeBlack" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+            <ingredient name="resourcePaint" count="25"/>
+        </recipe>
+        <recipe name="modDyeBlue" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+            <ingredient name="resourcePaint" count="25"/>
+        </recipe>
+        <recipe name="modDyeBrown" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+            <ingredient name="resourcePaint" count="25"/>
+        </recipe>
+        <recipe name="modDyePink" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+            <ingredient name="resourcePaint" count="25"/>
+        </recipe>
+        <recipe name="modDyePurple" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+            <ingredient name="resourcePaint" count="25"/>
+        </recipe>
+        <recipe name="modDyeYellow" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+            <ingredient name="resourcePaint" count="25"/>
+        </recipe>
+
+    <!--   -->
+        <recipe name="foodCanCatfood" count="1" craft_time="10" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="foodBoiledMeat" count="1"/>
+            <ingredient name="drinkCanEmpty" count="1"/>
         </recipe>
     </append>
 </configs>
