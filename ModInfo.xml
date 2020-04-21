@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="nejineji create" />
+		<Description value="Adds neji recipe" />
+		<Author value="minimal97" />
+		<Version value="1.0" />
+		<Website value="" />
+	</ModInfo>
+</xml>
