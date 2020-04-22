@@ -1,6 +1,6 @@
 # 7dtd_nejinejicreate
 
-##レシピ追加
+## レシピ追加
 
 ### ねじ
 
