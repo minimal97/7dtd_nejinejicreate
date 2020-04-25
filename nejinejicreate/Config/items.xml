@@ -1,0 +1,42 @@
+
+<configs>
+    <append xpath="/items">
+        <item name="foodOhitasi"> <!-- T3 Tools -->
+            <property name="Tags" value="food"/>
+            <property name="HoldType" value="16"/>
+            <property name="DisplayType" value="food"/>
+            <property name="EconomicValue" value="4"/>
+            <property name="Meshfile" value="#Other/Items?Crafting/plant_fibers.fbx"/>
+            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="MresourceYuccaFibers"/>
+            <property name="Extends" value="resourceYuccaFibers"/>
+            <property name="CustomIcon" value="resourceYuccaFibers"/>
+            <property name="CustomIconTint" value="a0a0ff"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="30"/>
+
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+                <property name="Use_time" value="..."/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="2"/>
+                <display_value name="dFoodPoisoningRisk" value=".02"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+                </triggered_effect>
+            </effect_group>
+        </item>
+
+    </append>
+</configs>

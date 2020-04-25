@@ -2,9 +2,9 @@
 <xml>
 	<ModInfo>
 		<Name value="nejineji create" />
-		<Description value="Adds neji recipe" />
+		<Description value="Adds recipe" />
 		<Author value="minimal97" />
-		<Version value="1.0" />
+		<Version value="1.1" />
 		<Website value="" />
 	</ModInfo>
 </xml>

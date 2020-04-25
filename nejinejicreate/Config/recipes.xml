@@ -62,5 +62,15 @@
             <ingredient name="foodBoiledMeat" count="1"/>
             <ingredient name="drinkCanEmpty" count="1"/>
         </recipe>
+	
+    <!--   -->
+        <recipe name="foodOhitasi" count="1" craft_time="10" craft_area="campfire"  craft_tool="toolCookingPot">
+        	<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+        	<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+        	<ingredient name="drinkJarBoiledWater" count="1"/>
+        	<effect_group>
+        		<passive_effect name="CraftingIngredientCount" level="2,5" operation="base_add" value="-1" tags="foodOhitasi"/>
+        	</effect_group>
+        </recipe>
     </append>
 </configs>
