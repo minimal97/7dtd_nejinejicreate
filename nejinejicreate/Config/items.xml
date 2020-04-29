@@ -4,7 +4,7 @@
         <item name="foodOhitasi"> <!-- T3 Tools -->
             <property name="Tags" value="food"/>
             <property name="HoldType" value="16"/>
-            <property name="DisplayType" value="food"/>
+            <property name="DisplayType" value="foodWater"/>
             <property name="EconomicValue" value="4"/>
             <property name="Meshfile" value="#Other/Items?Crafting/plant_fibers.fbx"/>
             <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -38,5 +38,54 @@
             </effect_group>
         </item>
 
+        <item name="foodButajiru">
+            <property name="Tags" value="food"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="butajiru_disp"/>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+            <property name="EconomicValue" value="4"/>
+            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="MresourceCrop"/>
+            <property name="Extends" value="resourceYuccaFibers"/>
+            <property name="CustomIcon" value="foodShamChowder"/>
+            <property name="CustomIconTint" value="D0C070"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="30"/>
+
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+                <property name="Use_time" value="..."/>
+            </property>
+
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
+
+		        <display_value name="dHypothermalResist" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+                <display_value name="dFoodPoisoningRisk" value=".01"/>
+                <display_value name="dDuration" value="183"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+                </triggered_effect>
+                
+    			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="363"/>
+    			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="1083">
+    			<requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="1083"/></triggered_effect>
+    			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffBlackStrapCoffee"/>
+            </effect_group>
+        	<effect_group tiered="false">
+        		<requirement name="HasBuff" buff="buffIsOnFire"/>
+        			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+        	</effect_group>
+        </item>
     </append>
+
+
 </configs>

@@ -1,3 +1,5 @@
 Key,english,japanese
 foodOhitasi,"Ohitashi","おひたし"
 foodOhitasiDesc,"Ohitashi","本当に必要だったのか。渾身のおひたし。"
+foodButajiru,"butajiru","ぶたじる"
+foodButajiruDesc,"butajiru","あったかくてうまい。"

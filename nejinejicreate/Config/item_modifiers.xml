@@ -1,0 +1,19 @@
+
+<configs>
+    <append xpath="/item_modifiers">
+
+    	<item_modifier name="modMeleeWoodSplitter2" installable_tags="melee" modifier_tags="damageWood" type="attachment">
+    		<property name="UnlockedBy" value="modMeleeWoodSplitterSchematic"/>
+    		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+    		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="CustomIcon" value="flamethrowerTrap"/>
+    		<effect_group tiered="false">
+    			<passive_effect name="DamageModifier" operation="perc_add" value=".35" tags="wood"/>
+    			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHarvestXPBalance"/>
+    			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHarvestXPBalance"/>
+    		</effect_group>
+    		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+    	</item_modifier>
+
+    </append>
+</configs>

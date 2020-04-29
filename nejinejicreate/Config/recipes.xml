@@ -72,5 +72,23 @@
         		<passive_effect name="CraftingIngredientCount" level="2,5" operation="base_add" value="-1" tags="foodOhitasi"/>
         	</effect_group>
         </recipe>
+
+        <recipe name="foodButajiru" count="1" craft_time="15" craft_area="campfire"  craft_tool="toolCookingPot">
+        	<ingredient name="foodCanMiso" count="1"/>
+        	<ingredient name="foodRawMeat" count="5"/>
+        	<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+        	<effect_group>
+        		<passive_effect name="CraftingIngredientCount" level="2,5" operation="base_add" value="-1" tags="foodOhitasi"/>
+        	</effect_group>
+        </recipe>
+
+
+    <!--   -->
+        <recipe name="modArmorJumpJets" count="1" craft_time="780" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="resourceForgedIron" count="20"/>
+            <ingredient name="resourceForgedSteel" count="20"/>
+            <ingredient name="armorScrapBoots" count="1"/>
+            <ingredient name="resourceSpring" count="40"/>
+        </recipe>
     </append>
 </configs>
