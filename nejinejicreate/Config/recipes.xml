@@ -82,6 +82,13 @@
         	</effect_group>
         </recipe>
 
+        <recipe name="foodPearsCake" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+            <ingredient name="foodCanPears" count="1"/>
+            <ingredient name="foodEgg" count="1"/>
+            <ingredient name="foodCornMeal" count="1"/>
+            <ingredient name="resourceAnimalFat" count="1"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+        </recipe>
 
     <!--   -->
         <recipe name="modArmorJumpJets" count="1" craft_time="780" craft_area="workbench" tags="workbenchCrafting">
@@ -90,5 +97,6 @@
             <ingredient name="armorScrapBoots" count="1"/>
             <ingredient name="resourceSpring" count="40"/>
         </recipe>
+
     </append>
 </configs>
