@@ -90,6 +90,9 @@
             <ingredient name="drinkJarBoiledWater" count="1"/>
         </recipe>
 
+        <recipe name="foodCornMeal" count="5">
+            <ingredient name="foodCropGraceCorn" count="1"/>
+        </recipe>
     <!--   -->
         <recipe name="modArmorJumpJets" count="1" craft_time="780" craft_area="workbench" tags="workbenchCrafting">
             <ingredient name="resourceForgedIron" count="20"/>
