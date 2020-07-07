@@ -120,6 +120,30 @@
                 </triggered_effect>
             </effect_group>
         </item>
+
+        <item name="SuperLuckyGlass">
+            <property name="CustomIcon" value="apparelNightvisionGoggles"/>
+            <property name="CustomIconTint" value="D0C030"/>
+            <property name="Extends" value="apparelShades"/>
+            <property name="Material" value="MelectricParts"/>
+            <property name="DisplayType" value="clothingAviatorGoggles"/>
+            <property class="UMA">
+                <property name="Mesh" value="gear_nightvision_goggles"/>
+                <property name="Overlay0" value="gear_nightvision_goggles"/>
+                <property name="Layer" value="1"/>
+                <property name="UISlot" value="Eyewear"/>
+            </property>
+            <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <effect_group tiered="false">
+                <passive_effect name="LootDropProb" operation="perc_add" value=".1"/>
+                <passive_effect name="HarvestCount" operation="base_add" value=".5" tags="artOfMiningLuckyStrikeHarvest"/>
+                <passive_effect name="ModSlots" operation="base_set" value="0"/>
+                <passive_effect name="LootGamestage" operation="base_add" value="15"/>
+                <passive_effect name="TreasureRadius" operation="base_add" value="-2"/>
+                <display_value name="dTreasureRadius" value="-2"/>
+            </effect_group>
+        </item>
     </append>
 
 

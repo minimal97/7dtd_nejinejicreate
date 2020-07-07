@@ -62,24 +62,24 @@
             <ingredient name="foodBoiledMeat" count="1"/>
             <ingredient name="drinkCanEmpty" count="1"/>
         </recipe>
-	
+
     <!--   -->
         <recipe name="foodOhitasi" count="1" craft_time="10" craft_area="campfire"  craft_tool="toolCookingPot">
-        	<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
-        	<ingredient name="resourceCropGoldenrodPlant" count="5"/>
-        	<ingredient name="drinkJarBoiledWater" count="1"/>
-        	<effect_group>
-        		<passive_effect name="CraftingIngredientCount" level="2,5" operation="base_add" value="-1" tags="foodOhitasi"/>
-        	</effect_group>
+            <ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+            <ingredient name="resourceCropGoldenrodPlant" count="5"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="2,5" operation="base_add" value="-1" tags="foodOhitasi"/>
+            </effect_group>
         </recipe>
 
         <recipe name="foodButajiru" count="1" craft_time="15" craft_area="campfire"  craft_tool="toolCookingPot">
-        	<ingredient name="foodCanMiso" count="1"/>
-        	<ingredient name="foodRawMeat" count="5"/>
-        	<ingredient name="resourceCropGoldenrodPlant" count="5"/>
-        	<effect_group>
-        		<passive_effect name="CraftingIngredientCount" level="2,5" operation="base_add" value="-1" tags="foodOhitasi"/>
-        	</effect_group>
+            <ingredient name="foodCanMiso" count="1"/>
+            <ingredient name="foodRawMeat" count="5"/>
+            <ingredient name="resourceCropGoldenrodPlant" count="5"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="2,5" operation="base_add" value="-1" tags="foodOhitasi"/>
+            </effect_group>
         </recipe>
 
         <recipe name="foodPearsCake" count="1" craft_area="campfire" craft_tool="toolCookingPot">
@@ -93,6 +93,7 @@
         <recipe name="foodCornMeal" count="5">
             <ingredient name="foodCropGraceCorn" count="1"/>
         </recipe>
+
     <!--   -->
         <recipe name="modArmorJumpJets" count="1" craft_time="780" craft_area="workbench" tags="workbenchCrafting">
             <ingredient name="resourceForgedIron" count="20"/>
@@ -101,5 +102,13 @@
             <ingredient name="resourceSpring" count="40"/>
         </recipe>
 
+    <!--   -->
+        <recipe name="SuperLuckyGlass" count="1" craft_time="780" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="apparelNightvisionGoggles" count="1"/>
+            <ingredient name="apparelAviatorGoggles" count="1"/>
+            <ingredient name="resourceMechanicalParts" count="150"/>
+            <ingredient name="resourceElectricParts" count="175"/>
+            <ingredient name="resourceGoldNugget" count="3"/>
+        </recipe>
     </append>
 </configs>
