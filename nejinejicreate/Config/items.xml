@@ -144,6 +144,13 @@
                 <display_value name="dTreasureRadius" value="-2"/>
             </effect_group>
         </item>
+        <item name="qc_fetch3">
+        	<property name="Extends" value="challengeQuestMaster"/>
+        	<property class="Action0">
+        		<property name="QuestGiven" value="challenge_fetch3"/>
+        	</property>
+        </item>
+
     </append>
 
 
