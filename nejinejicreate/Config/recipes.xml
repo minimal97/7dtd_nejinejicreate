@@ -110,5 +110,28 @@
             <ingredient name="resourceElectricParts" count="175"/>
             <ingredient name="resourceGoldNugget" count="3"/>
         </recipe>
+
+        <recipe name="meleeToolTorch" count="1" craft_area="campfire">
+            <ingredient name="resourceCloth" count="3"/>
+            <ingredient name="resourceWood" count="1"/>
+        </recipe>
+
+        <recipe name="emberPileDeco1" count="1" craft_area="campfire">
+            <ingredient name="resourceWood" count="5"/>
+        </recipe>
+
+    <!--   -->
+        <recipe name="woodLogSpike1" count="1">
+            <ingredient name="resourceWood" count="20"/>
+        </recipe>
+
+        <recipe name="woodTrellisDiamond" count="1">
+            <ingredient name="resourceWood" count="6"/>
+        </recipe>
+
+        <recipe name="woodTrellisSquare" count="1">
+            <ingredient name="resourceWood" count="6"/>
+        </recipe>
+
     </append>
 </configs>
