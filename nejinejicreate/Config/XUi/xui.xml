@@ -1,0 +1,4 @@
+<configs>
+	<!-- Crafting slots -->
+	<set xpath="/xui/ruleset[@name='default']/window_group[@name='crafting']/window[@name='windowCraftingQueue']/@name">S420windowCraftingQueue</set>
+</configs>
