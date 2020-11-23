@@ -1,0 +1,9 @@
+<Doughs>
+  <append xpath="/entitygroups/*">
+    <entity name="animalBoar_test"/>
+    <entity name="zombieSnow"/>
+    <entity name="zombieWalkSpider"/>
+    <entity name="zombie_GeroBBA"/>
+    <entity name="zombie_4leg"/>
+  </append>
+</Doughs>

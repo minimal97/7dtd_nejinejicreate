@@ -1,0 +1,112 @@
+
+<configs>
+    <append xpath="/entity_classes">
+
+        <entity_class name="animalBoar_test" extends="animalBoar">
+        	<property name="Tags" value="entity,animal,hostile,boar,perkAT02,perkAT03"/>
+        	<property name="MapIcon" value="ui_game_symbol_tracking_pig"/>
+        	<property name="TrackerIcon" value="ui_game_symbol_tracking_pig"/>
+        	<property name="IsEnemyEntity" value="false"/><!-- override hostile template setting so he can spawn in safe zones -->
+        	<property name="AvatarController" value="AvatarAnimalController"/>
+        	<property name="ModelType" value="Standard"/>
+        	<property name="HasRagdoll" value="true"/>
+        	<property name="PhysicsBody" value="boar"/>
+        	<property name="Mass" value="200"/>
+        	<property name="Mesh" value="Animals/Boar/AnimalBoarStandardRagdoll"/>
+        	<property name="HasDeathAnim" value="true"/>
+        	<property name="RootMotion" value="true"/>
+        	<property name="RagdollOnDeathChance" value=".5"/>
+
+        	<property name="ReplaceMaterial0" value="#Entities/Zombies?Zombies/Zombies/Materials/bodyCopS_radiated.mat"/>
+        	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/rad_eye.mat"/>
+
+        	<!-- Gameplay -->
+        	<property name="PainResistPerHit" value=".75"/>
+        	<property name="MoveSpeed" value="0.8"/>
+        	<property name="MoveSpeedAggro" value="2.0, 2.0"/>
+        	<property name="MoveSpeedPanic" value="2.0"/>
+
+        	<property name="HandItem" value="meleeHandAnimalWolf"/>
+
+        	<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="7"/>
+        	<drop event="Harvest" name="resourceAnimalFat" count="4" tag="butcherHarvest"/>
+        	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+        	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+        	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+        	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+
+            <property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityPlayer"/>
+
+        	<effect_group name="Base Effects">
+        		<passive_effect name="HealthMax" operation="base_set" value="500"/>
+        		<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+        	</effect_group>
+
+        </entity_class>
+
+        <entity_class name="zombieWalkSpider" extends="zombieFarmer">
+            <property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardSpiderRagdoll.prefab"/>
+        	<property name="ReplaceMaterial0" value="#Entities/Zombies?Zombies/Zombies/Materials/spiderzombie.mat"/>
+        	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/rad_eye.mat"/>
+        	<property name="HandItem" value="meleeHandZombieHazMat"/>
+
+        	<!-- Gameplay -->
+        	<property name="HandItem" value="meleeHandZombieBurning"/>
+        	<effect_group name="Base Effects">
+        		<passive_effect name="HealthMax" operation="base_set" value="150"/>
+        		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+        	</effect_group>
+        </entity_class>
+
+
+        <entity_class name="zombie_GeroBBA" extends="zombieFatCop">
+            <property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardBigMamaHDRagdoll.prefab"/>
+        	<property name="HandItem" value="meleeHandZombieHazMat"/>
+
+        	<!-- Gameplay -->
+        	<property name="HandItem" value="meleeHandZombieBurning"/>
+        	<effect_group name="Base Effects">
+        		<passive_effect name="HealthMax" operation="base_set" value="250"/>
+        		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+        	</effect_group>
+        </entity_class>
+
+
+        <entity_class name="zombie_4leg" extends="zombieSpider">
+            <property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardCheerleaderRagdoll.prefab"/>
+        	<property name="HandItem" value="meleeHandZombieHazMat"/>
+
+        	<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+        	<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+        	<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+        	<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+        	<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+        	<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+        	<property name="AvatarController" value="AvatarZombie01Controller"/>
+
+        	<!-- Gameplay -->
+        	<property name="HandItem" value="meleeHandZombie01"/>
+        	<effect_group name="Base Effects">
+        		<passive_effect name="HealthMax" operation="base_set" value="150"/>
+        		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+        	</effect_group>
+        </entity_class>
+
+
+        <entity_class name="zombiehu" extends="zombieFarmer">
+        	<property name="ReplaceMaterial0" value="#Entities/Zombies?Zombies/Materials/corpse.mat"/>
+        	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/rad_eye.mat"/>
+        	<property name="HandItem" value="meleeHandZombieHazMat"/>
+
+        	<!-- Gameplay -->
+        	<property name="HandItem" value="meleeHandZombieBurning"/>
+        	<effect_group name="Base Effects">
+        		<passive_effect name="HealthMax" operation="base_set" value="150"/>
+        		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+        	</effect_group>
+        </entity_class>
+
+
+    </append>
+
+</configs>
