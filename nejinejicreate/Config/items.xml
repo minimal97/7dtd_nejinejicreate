@@ -146,6 +146,7 @@
         </item>
         <item name="qc_fetch3">
         	<property name="Extends" value="challengeQuestMaster"/>
+            <property name="CustomIconTint" value="D0D0E0"/>
         	<property class="Action0">
         		<property name="QuestGiven" value="challenge_fetch3"/>
         	</property>
