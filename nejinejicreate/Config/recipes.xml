@@ -95,14 +95,6 @@
         </recipe>
 
     <!--   -->
-        <recipe name="modArmorJumpJets" count="1" craft_time="780" craft_area="workbench" tags="workbenchCrafting">
-            <ingredient name="resourceForgedIron" count="20"/>
-            <ingredient name="resourceForgedSteel" count="20"/>
-            <ingredient name="armorScrapBoots" count="1"/>
-            <ingredient name="resourceSpring" count="40"/>
-        </recipe>
-
-    <!--   -->
         <recipe name="SuperLuckyGlass" count="1" craft_time="780" craft_area="workbench" tags="workbenchCrafting">
             <ingredient name="apparelNightvisionGoggles" count="1"/>
             <ingredient name="apparelAviatorGoggles" count="1"/>
